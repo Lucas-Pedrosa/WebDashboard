@@ -83,7 +83,7 @@ form .details-box .input-box {
 .details-box .input-box input:focus,
 .details-box .input-box input:valid,
 .details-box .input-box textarea:focus {
-    border-color: #000;
+    border-color: #000
 }
 
 form .button {
@@ -111,7 +111,6 @@ form .button input:hover {
 }
 
 footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;

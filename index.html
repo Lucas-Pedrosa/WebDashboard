@@ -10,6 +10,10 @@
     <script src="./sidebars/sidebars.css"></script>
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
@@ -18,6 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
 
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/fale-conosco.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Dashboard</title>
@@ -25,11 +31,21 @@
 </head>
 
 <body>
+
+
+  <header class="header">
+    <a href="./index.html" class="logo">Liber</a>
+    <div class="header-right">
+      <a class="active" href="./index.html">Home</a>
+      <a href="./quem-somos.html">Quem Somos</a>
+      <a  href="./fale-conosco.html">Fale Conosco</a>
+    </div>
+  </header>
     
-    <div class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+    <!--<div class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
           <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-          <span class="fs-4">Sidebar</span>
+          <span class="fs-4">Menu</span>
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
@@ -40,27 +56,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link-dark">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-              Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link link-dark">
+            <a href="./quem-somos.html" class="nav-link link-dark">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-              Orders
+              Quem Somos
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link link-dark">
+            <a href="./fale-conosco.html" class="nav-link link-dark">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link link-dark">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-              Customers
+              Fale Conosco
             </a>
           </li>
         </ul>
@@ -78,35 +82,135 @@
             <li><a class="dropdown-item" href="#">Sign out</a></li>
           </ul>
         </div>
-      </div>
+      </div>-->
 
+      <div class="conteudo">
 
-      <div class="card-container">
-        <div class="card">
-          <div class="front">
-            
-            <figure class="highcharts-figure">
-              <div id="container"></div>
-              <p class="highcharts-description"></p>
-            </figure>
+        <div class="grafico">
 
+          <div class="card-container">
+            <div class="card">
+              <div class="front">
+                
+                <figure class="highcharts-figure">
+                  <div id="container"></div>
+                  <p class="highcharts-description"></p>
+                </figure>
+  
+              </div>
+              <div class="back">
+
+                <figure class="highcharts-figure">
+                  <div id="container2"></div>
+                  <p class="highcharts-description"></p>
+              </figure>
+  
+              </div>
+            </div>
           </div>
-          <div class="back">
-            
-            <figure class="highcharts-figure">
-              <div id="container2"></div>
-              <p class="highcharts-description"></p>
-          </figure>
 
-          </div>
+          <input class="botao" type="button" value="Detalhes">
+
         </div>
+
+        <div class="grafico">
+
+          <div class="card-container2">
+            <div class="card2">
+              <div class="front2">
+                
+                <figure class="highcharts-figure">
+                  <div id="container3"></div>
+                  <p class="highcharts-description"></p>
+              </figure>
+  
+              </div>
+              <div class="back2">
+
+                <figure class="highcharts-figure">
+                  <div id="container4"></div>
+                  <p class="highcharts-description"></p>
+                </figure>
+  
+              </div>
+            </div>
+          </div>
+
+          <input class="botao2" type="button" value="Detalhes">
+
+        </div>
+
+
+
+        <div class="grafico">
+
+          <div class="card-container3">
+            <div class="card3">
+              <div class="front3">
+                
+                <figure class="highcharts-figure">
+                  <div id="container5"></div>
+                  <p class="highcharts-description"></p>
+              </figure>
+  
+              </div>
+              <div class="back3">
+
+                <figure class="highcharts-figure">
+                  <div id="container6"></div>
+                  <p class="highcharts-description"></p>
+                </figure>
+  
+              </div>
+            </div>
+          </div>
+
+          <input class="botao3" type="button" value="Detalhes">
+
+        </div>
+
+
+        <div class="grafico">
+
+          <div class="card-container4">
+            <div class="card4">
+              <div class="front4">
+                
+                <figure class="highcharts-figure">
+                  <div id="container7"></div>
+                  <p class="highcharts-description"></p>
+              </figure>
+  
+              </div>
+              <div class="back4">
+
+                <figure class="highcharts-figure">
+                  <div id="container8"></div>
+                  <p class="highcharts-description"></p>
+                </figure>
+  
+              </div>
+            </div>
+          </div>
+
+          <input class="botao4" type="button" value="Detalhes">
+
+        </div>
+
+        
+
       </div>
+
+      
       
 
+      <script src="./js/script.js"></script>
 
+      <footer>
+        <p>Liber&copy; Desenvolvido por Lucas e Giovanni | <a href="./quem-somos.html" target="_blank">Quem Somos</a></p>
+    </footer>
 
 </body>
 
-<script src="./js/script.js"></script>
 
 </html>

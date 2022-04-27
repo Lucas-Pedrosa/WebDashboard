@@ -2,9 +2,37 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.conteudo{
+    width: 100%;
     display: flex;
     flex-direction: row;
-  }
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 200px 0px;
+}
+
+.grafico{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.highcharts-figure{
+    margin: 0px !important;
+}
+
+
+
+.botao{
+    width: 80px;
+    z-index: 1;
+}
 
 .sidebar{
     width: 20vw;
@@ -75,7 +103,7 @@ body {
 
 /*GRAPH 2*/
 
-#container2 {
+/*#container2 {
     height: 400px;
 }
 
@@ -93,6 +121,106 @@ body {
 #sliders td {
     padding-right: 1em;
     white-space: nowrap;
+}*/
+
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container2 {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+
+/*GRAPH 3*/
+
+
+#container3 {
+    height: 400px;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
 }
 
 
@@ -146,6 +274,262 @@ body {
 
 
 
+
+/*GRAPH 4*/
+
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container4 {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+
+
+/*GRAPH 5*/
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 360px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+/*GRAPH 6*/
+
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container6 {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+
+/*GRAPH 7*/
+
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container7 {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+/*GRAPH 8*/
+
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container8 {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+/*CARD 1*/
+
   body
   {
       background: #cfd8dc;
@@ -158,8 +542,7 @@ body {
       font-weight: bold;
   
       width: 400px;
-      height: 250px;
-      margin: 80px auto;
+      /*margin: 80px auto;*/
   
       /*border-radius: 10px;*/
   
@@ -202,6 +585,206 @@ body {
   }
   
   .back
+  {
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      transform: rotateY(180deg);
+  
+      /*color: #2196f3;*/
+      background: #fff;
+  }
+
+
+
+  /*CARD 2*/
+
+
+  .card-container2
+  {
+      font-family: 'Open Sans', sans serif;
+      font-size: 120px;
+      font-weight: bold;
+  
+      width: 400px;
+      /*margin: 80px auto;*/
+  
+      /*border-radius: 10px;*/
+  
+      perspective: 1400px;
+  }
+  
+  .card2
+  {
+      position: relative;
+  
+      height: 100%;
+  
+      /*border-radius: 10px;*/
+  
+      width: 100%;
+      transform-style: preserve-3d;
+
+      border: none !important;
+  }
+  
+  .front2,
+  .back2
+  {
+      display: flex;
+  
+      width: 100%;
+      height: 100%;
+  
+      border-radius: 10px;
+  
+      justify-content: center;
+      align-items: center;
+      backface-visibility: hidden;
+  }
+  
+  .front2
+  {
+      color: #fff;
+      /*background: #2196f3;*/
+  }
+  
+  .back2
+  {
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      transform: rotateY(180deg);
+  
+      /*color: #2196f3;*/
+      background: #fff;
+  }
+
+
+
+
+  /*CARD 3*/
+
+
+  .card-container3
+  {
+      font-family: 'Open Sans', sans serif;
+      font-size: 120px;
+      font-weight: bold;
+  
+      width: 400px;
+      /*margin: 80px auto;*/
+  
+      /*border-radius: 10px;*/
+  
+      perspective: 1400px;
+  }
+  
+  .card3
+  {
+      position: relative;
+  
+      height: 100%;
+  
+      /*border-radius: 10px;*/
+  
+      width: 100%;
+      transform-style: preserve-3d;
+
+      border: none !important;
+  }
+  
+  .front3,
+  .back3
+  {
+      display: flex;
+  
+      width: 100%;
+      height: 100%;
+  
+      border-radius: 10px;
+  
+      justify-content: center;
+      align-items: center;
+      backface-visibility: hidden;
+  }
+  
+  .front3
+  {
+      color: #fff;
+      /*background: #2196f3;*/
+  }
+  
+  .back3
+  {
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      transform: rotateY(180deg);
+  
+      /*color: #2196f3;*/
+      background: #fff;
+  }
+
+
+
+
+  /*CARD 4*/
+
+
+  .card-container4
+  {
+      font-family: 'Open Sans', sans serif;
+      font-size: 120px;
+      font-weight: bold;
+  
+      width: 400px;
+      /*margin: 80px auto;*/
+  
+      /*border-radius: 10px;*/
+  
+      perspective: 1400px;
+  }
+  
+  .card4
+  {
+      position: relative;
+  
+      height: 100%;
+  
+      /*border-radius: 10px;*/
+  
+      width: 100%;
+      transform-style: preserve-3d;
+
+      border: none !important;
+  }
+  
+  .front4,
+  .back4
+  {
+      display: flex;
+  
+      width: 100%;
+      height: 100%;
+  
+      border-radius: 10px;
+  
+      justify-content: center;
+      align-items: center;
+      backface-visibility: hidden;
+  }
+  
+  .front4
+  {
+      color: #fff;
+      /*background: #2196f3;*/
+  }
+  
+  .back4
   {
       position: absolute;
       top: 0;

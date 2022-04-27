@@ -13,7 +13,7 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.title {
+.job {
     max-width: 800px;
     margin: 0 auto;
     padding-left: 100px;
@@ -39,7 +39,7 @@ body {
     background-color: white;
 }
 
-.job {
+.title {
     color: gray;
     font-size: 18px;
 }
@@ -111,9 +111,9 @@ footer a {
         text-align: center;
         padding: 0px;
     }
+}
 
-    .title {
+.title {
         text-align: center;
         padding: 0;
     }
-}
