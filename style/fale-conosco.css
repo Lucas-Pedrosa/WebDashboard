@@ -9,7 +9,7 @@
 
 .outer-container {
     display: flex;
-    height: 900px;
+    height: 720px;
     justify-content: center;
     align-items: center;
     background: rgb(255, 255, 255);
@@ -37,7 +37,7 @@
     bottom: 0;
     height: 3px;
     width: 30px;
-    background: #9b59b6;
+    background: #000;
 }
 
 .container form .details-box {
@@ -83,7 +83,7 @@ form .details-box .input-box {
 .details-box .input-box input:focus,
 .details-box .input-box input:valid,
 .details-box .input-box textarea:focus {
-    border-color: #9b59b6;
+    border-color: #000
 }
 
 form .button {
@@ -101,12 +101,12 @@ form .button input {
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 5px;
-    background: #9b59b6;
+    background: #000;
     transition: all 0.3s ease;
 }
 
 form .button input:hover {
-    background: #814997;
+    background: #5c5c5c;
     transition: all 0.3s ease;
 }
 

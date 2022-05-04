@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+    margin: 0;
+}
+
+h1 {
+    margin: 25px 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 255, 255);
 }
 
-header {
+.job {
     max-width: 800px;
     margin: 0 auto;
-    padding-left: 100px;
 }
 
 .column {
@@ -52,6 +59,7 @@ button {
     width: 100%;
     font-size: 18px;
     border-radius: 0px 0px 10px 10px;
+    margin-top: 20px;
 }
 
 .card a {
@@ -65,8 +73,12 @@ button:hover, a:hover {
     opacity: 0.7;
 }
 
+img{
+    width: 100%;
+}
+
 footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -103,3 +115,8 @@ footer a {
         padding: 0px;
     }
 }
+
+.title {
+        text-align: center;
+        padding: 0;
+    }

@@ -11,7 +11,7 @@ Highcharts.chart('container', {
         }
     },
     title: {
-        text: ''
+        text: 'Gêneros mais recomendadas'
     },
     accessibility: {
         point: {
@@ -91,10 +91,10 @@ Highcharts.chart('container2', {
         type: 'column'
     },
     title: {
-        text: 'Browser market shares. January, 2018'
+        text: 'Gêneros mais recomendadas'
     },
     subtitle: {
-        text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+        text: ''
     },
     accessibility: {
         announceNewData: {
@@ -134,39 +134,34 @@ Highcharts.chart('container2', {
             colorByPoint: true,
             data: [
                 {
-                    name: "Chrome",
-                    y: 62.74,
-                    drilldown: "Chrome"
+                    name: "ação",
+                    y: 45.0,
+                    drilldown: "ação"
                 },
                 {
-                    name: "Firefox",
-                    y: 10.57,
-                    drilldown: "Firefox"
+                    name: "terror",
+                    y: 26.8,
+                    drilldown: "terror"
                 },
                 {
-                    name: "Internet Explorer",
-                    y: 7.23,
-                    drilldown: "Internet Explorer"
+                    name: "aventura",
+                    y: 12.8,
+                    drilldown: "aventura"
                 },
                 {
-                    name: "Safari",
-                    y: 5.58,
-                    drilldown: "Safari"
+                    name: "romance",
+                    y: 8.5,
+                    drilldown: "romance"
                 },
                 {
-                    name: "Edge",
-                    y: 4.02,
-                    drilldown: "Edge"
+                    name: "policial",
+                    y: 6.2,
+                    drilldown: "policial"
                 },
                 {
-                    name: "Opera",
-                    y: 1.92,
-                    drilldown: "Opera"
-                },
-                {
-                    name: "Other",
-                    y: 7.62,
-                    drilldown: null
+                    name: "investigação",
+                    y: 0.7,
+                    drilldown: "investigação"
                 }
             ]
         }
@@ -404,18 +399,18 @@ Highcharts.chart('container2', {
 
 const chart = Highcharts.chart('container3', {
     title: {
-        text: 'Chart.update'
+        text: 'Livros mais vendidos(Milhões)'
     },
     subtitle: {
-        text: 'Plain'
+        text: ''
     },
     xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: ['Don Quixote', 'Um Conto de Duas Cidades', 'O Senhor dos Anéis', 'O Pequeno Príncipe', 'Harry Potter e a Pedra Filosofal', 'O Hobbit', 'O Hobbit']
     },
     series: [{
         type: 'column',
         colorByPoint: true,
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        data: [500, 200, 150, 140, 107, 100, 100],
         showInLegend: false
     }]
 });
@@ -429,10 +424,10 @@ Highcharts.chart('container4', {
         type: 'column'
     },
     title: {
-        text: 'Browser market shares. January, 2018'
+        text: 'Livros mais vendidos(Milhões)'
     },
     subtitle: {
-        text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+        text: ''
     },
     accessibility: {
         announceNewData: {
@@ -472,39 +467,39 @@ Highcharts.chart('container4', {
             colorByPoint: true,
             data: [
                 {
-                    name: "Chrome",
-                    y: 62.74,
-                    drilldown: "Chrome"
+                    name: "Don Quixote",
+                    y: 500,
+                    drilldown: "Don Quixote"
                 },
                 {
-                    name: "Firefox",
-                    y: 10.57,
-                    drilldown: "Firefox"
+                    name: "Um Conto de Duas Cidades",
+                    y: 200,
+                    drilldown: "Um Conto de Duas Cidades"
                 },
                 {
-                    name: "Internet Explorer",
-                    y: 7.23,
-                    drilldown: "Internet Explorer"
+                    name: "O Senhor dos Anéis",
+                    y: 150,
+                    drilldown: "O Senhor dos Anéis"
                 },
                 {
-                    name: "Safari",
-                    y: 5.58,
-                    drilldown: "Safari"
+                    name: "O Pequeno Príncipe",
+                    y: 140,
+                    drilldown: "O Pequeno Príncipe"
                 },
                 {
-                    name: "Edge",
-                    y: 4.02,
-                    drilldown: "Edge"
+                    name: "Harry Potter e a Pedra Filosofal",
+                    y: 107,
+                    drilldown: "Harry Potter e a Pedra Filosofal"
                 },
                 {
-                    name: "Opera",
-                    y: 1.92,
-                    drilldown: "Opera"
+                    name: "O Hobbit",
+                    y: 100,
+                    drilldown: "O Hobbit"
                 },
                 {
-                    name: "Other",
-                    y: 7.62,
-                    drilldown: null
+                    name: "O Hobbit",
+                    y: 100,
+                    drilldown: "O Hobbit"
                 }
             ]
         }
@@ -745,17 +740,17 @@ Highcharts.chart('container5', {
         type: 'line'
     },
     title: {
-        text: 'Monthly Average Temperature'
+        text: 'Escritores com mais vendas'
     },
     subtitle: {
-        text: 'Source: WorldClimate.com'
+        text: ''
     },
     xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio']
     },
     yAxis: {
         title: {
-            text: 'Temperature (°C)'
+            text: 'unidades por mês'
         }
     },
     plotOptions: {
@@ -767,12 +762,21 @@ Highcharts.chart('container5', {
         }
     },
     series: [{
-        name: 'Tokyo',
-        data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        name: 'Itamar Vieira Junior',
+        data: [30,50,80,20,50]
     }, {
-        name: 'London',
-        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-    }]
+        name: 'Napoleon Hill',
+        data: [60,45,80,15,35]
+    }, {
+        name: 'George Orwell',
+        data: [45,50,12,80,75]
+    }, {
+        name: 'Hal Elrod',
+        data: [45,12,74,63,25]
+    }, {
+        name: 'Colleen Hoover',
+        data: [14,15,48,90,35]
+    },]
 });
 
 
@@ -786,10 +790,10 @@ Highcharts.chart('container6', {
         type: 'column'
     },
     title: {
-        text: 'Browser market shares. January, 2018'
+        text: 'Escritores com mais vendas'
     },
     subtitle: {
-        text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+        text: ''
     },
     accessibility: {
         announceNewData: {
@@ -829,39 +833,29 @@ Highcharts.chart('container6', {
             colorByPoint: true,
             data: [
                 {
-                    name: "Chrome",
-                    y: 62.74,
-                    drilldown: "Chrome"
+                    name: "Itamar Vieira Junior",
+                    y: 230,
+                    drilldown: "Itamar Vieira Junior"
                 },
                 {
-                    name: "Firefox",
-                    y: 10.57,
-                    drilldown: "Firefox"
+                    name: "Napoleon Hill",
+                    y: 235,
+                    drilldown: "Napoleon Hill"
                 },
                 {
-                    name: "Internet Explorer",
-                    y: 7.23,
-                    drilldown: "Internet Explorer"
+                    name: "George Orwell",
+                    y: 262,
+                    drilldown: "George Orwell"
                 },
                 {
-                    name: "Safari",
-                    y: 5.58,
-                    drilldown: "Safari"
+                    name: "Hal Elrod",
+                    y: 219,
+                    drilldown: "Hal Elrod"
                 },
                 {
-                    name: "Edge",
-                    y: 4.02,
-                    drilldown: "Edge"
-                },
-                {
-                    name: "Opera",
-                    y: 1.92,
-                    drilldown: "Opera"
-                },
-                {
-                    name: "Other",
-                    y: 7.62,
-                    drilldown: null
+                    name: "Colleen Hoover",
+                    y: 202,
+                    drilldown: "Colleen Hoover"
                 }
             ]
         }
@@ -1101,14 +1095,14 @@ Highcharts.chart('container6', {
 
 Highcharts.chart('container7', {
     title: {
-        text: 'Combination chart'
+        text: 'Livros mais lidos por quadrimestre'
     },
     xAxis: {
-        categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+        categories: ['1º Quadrimestre', '2º Quadrimestre', '3º Quadrimestre']
     },
     labels: {
         items: [{
-            html: 'Total fruit consumption',
+            html: '',
             style: {
                 left: '50px',
                 top: '18px',
@@ -1121,47 +1115,16 @@ Highcharts.chart('container7', {
     },
     series: [{
         type: 'column',
-        name: 'Jane',
-        data: [3, 2, 1, 3, 4]
+        name: 'O homem mais rico da Babilônia',
+        data: [16, 12, 12]
     }, {
         type: 'column',
-        name: 'John',
-        data: [2, 3, 5, 7, 6]
+        name: 'Todas as suas imperfeições',
+        data: [25,14,17]
     }, {
         type: 'column',
-        name: 'Joe',
-        data: [4, 3, 3, 9, 0]
-    }, {
-        type: 'spline',
-        name: 'Average',
-        data: [3, 2.67, 3, 6.33, 3.33],
-        marker: {
-            lineWidth: 2,
-            lineColor: Highcharts.getOptions().colors[3],
-            fillColor: 'white'
-        }
-    }, {
-        type: 'pie',
-        name: 'Total consumption',
-        data: [{
-            name: 'Jane',
-            y: 13,
-            color: Highcharts.getOptions().colors[0] // Jane's color
-        }, {
-            name: 'John',
-            y: 23,
-            color: Highcharts.getOptions().colors[1] // John's color
-        }, {
-            name: 'Joe',
-            y: 19,
-            color: Highcharts.getOptions().colors[2] // Joe's color
-        }],
-        center: [100, 80],
-        size: 100,
-        showInLegend: false,
-        dataLabels: {
-            enabled: false
-        }
+        name: 'O enigma do quarto 622',
+        data: [25, 33,15]
     }]
 });
 
@@ -1175,10 +1138,10 @@ Highcharts.chart('container8', {
         type: 'column'
     },
     title: {
-        text: 'Browser market shares. January, 2018'
+        text: 'Livros mais lidos por quadrimestre'
     },
     subtitle: {
-        text: 'Click the columns to view versions. Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
+        text: ''
     },
     accessibility: {
         announceNewData: {
@@ -1190,7 +1153,7 @@ Highcharts.chart('container8', {
     },
     yAxis: {
         title: {
-            text: 'Total percent market share'
+            text: 'Leituras por mês'
         }
 
     },
@@ -1202,7 +1165,7 @@ Highcharts.chart('container8', {
             borderWidth: 0,
             dataLabels: {
                 enabled: true,
-                format: '{point.y:.1f}%'
+                format: '{point.y:.1f}'
             }
         }
     },
@@ -1218,39 +1181,19 @@ Highcharts.chart('container8', {
             colorByPoint: true,
             data: [
                 {
-                    name: "Chrome",
-                    y: 62.74,
-                    drilldown: "Chrome"
+                    name: "O homem mais rico da Babilônia",
+                    y: 40,
+                    drilldown: "O homem mais rico da Babilônia"
                 },
                 {
-                    name: "Firefox",
-                    y: 10.57,
-                    drilldown: "Firefox"
+                    name: "Todas as suas imperfeições",
+                    y: 56,
+                    drilldown: "Todas as suas imperfeições"
                 },
                 {
-                    name: "Internet Explorer",
-                    y: 7.23,
-                    drilldown: "Internet Explorer"
-                },
-                {
-                    name: "Safari",
-                    y: 5.58,
-                    drilldown: "Safari"
-                },
-                {
-                    name: "Edge",
-                    y: 4.02,
-                    drilldown: "Edge"
-                },
-                {
-                    name: "Opera",
-                    y: 1.92,
-                    drilldown: "Opera"
-                },
-                {
-                    name: "Other",
-                    y: 7.62,
-                    drilldown: null
+                    name: "O enigma do quarto 622",
+                    y: 75,
+                    drilldown: "O enigma do quarto 622"
                 }
             ]
         }
