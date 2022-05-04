@@ -13,21 +13,20 @@
 <h3 align="center">
   Tela principal do Dashboard:
 </h3>
-<img src="./img/tela1.png" align="center" />
+<img src="https://raw.githubusercontent.com/Lucas-Pedrosa/WebDashboard/main/img/tela1.PNG" align="center" />
 
 <h3 align="center">
   Tela do Fale Conosco:
 </h3>
-<img src="./img/tela3.png" align="center" />
+<img src="https://raw.githubusercontent.com/Lucas-Pedrosa/WebDashboard/main/img/tela3.PNG" align="center" />
 
 <h3 align="center">
   Tela do Quem Somos:
 </h3>
-<img src="./img/tela2.png" align="center" />
+<img src="https://raw.githubusercontent.com/Lucas-Pedrosa/WebDashboard/main/img/tela2.PNG" align="center" />
 
 <div align="center" margin-bottom="30">
     <h3>Integrantes: </h3> 
     <div>Giovanni Mayer Sanches Zanotti - Prontuário: CP3008266</div>
     <div>Lucas Dias Pedrosa - Prontuário: CP300810X</div>
 </div>
-
