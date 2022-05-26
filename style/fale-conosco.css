@@ -7,12 +7,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    background-color: #f1f1f1 !important;
+}
+
 .outer-container {
     display: flex;
     height: 720px;
     justify-content: center;
     align-items: center;
-    background: rgb(255, 255, 255);
     padding: 10px;
 }
 
@@ -22,6 +25,7 @@
     background: rgb(255, 255, 255);
     padding: 25px 30px;
     border-radius: 5px;
+    box-shadow: 1px 1px 23px -8px black;
 }
 
 .container .title {

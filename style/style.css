@@ -47,6 +47,7 @@ footer {
 .botao, .botao2, .botao3, .botao4 {
     width: 80px;
     z-index: 1;
+    margin-top: 10px;
 }
 
 .sidebar{
@@ -348,6 +349,11 @@ footer {
 
 
 /*GRAPH 5*/
+
+#container5 {
+    height: 400px;
+    border-radius: 10px;
+}
 
 .highcharts-figure,
 .highcharts-data-table table {
