@@ -1,4 +1,7 @@
 
+
+
+
 /*GRAPH 1*/
 
 Highcharts.chart('container', {
@@ -53,37 +56,6 @@ Highcharts.chart('container', {
 
 
 /*GRAPH 2*/
-
-/*const chart = new Highcharts.Chart({
-    chart: {
-        renderTo: 'container2',
-        type: 'column',
-        options3d: {
-            enabled: true,
-            alpha: 15,
-            beta: 15,
-            depth: 50,
-            viewDistance: 25
-        }
-    },
-    title: {
-        text: 'Chart rotation demo'
-    },
-    subtitle: {
-        text: 'Test options by dragging the sliders below'
-    },
-    plotOptions: {
-        column: {
-            depth: 25
-        }
-    },
-    series: [{
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-    },{
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-    }
-    ]
-});*/
 
 // Create the chart
 Highcharts.chart('container2', {
@@ -1426,21 +1398,70 @@ Highcharts.chart('container8', {
 });
 
 
+/* GRAPH 9 */
+
+Highcharts.chart('container9', {
+
+    title: {
+        text: 'Solar Employment Growth by Sector, 2010-2016'
+    },
+
+    subtitle: {
+        text: 'Source: thesolarfoundation.com'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Number of Employees'
+        }
+    },
+
+    xAxis: {
+        accessibility: {
+            rangeDescription: 'Range: 2010 to 2017'
+        }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2010
+        }
+    },
+
+    series: [{
+        name: 'Installation',
+        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+
 
 
 /*CARD FLIP*/
-
-/*function flip(event){
-	var element = event.currentTarget;
-	if (element.className === "card") {
-    if(element.style.transform == "rotateY(180deg)") {
-      element.style.transform = "rotateY(0deg)";
-    }
-    else {
-      element.style.transform = "rotateY(180deg)";
-    }
-  }
-};*/
 
 
 /*botao*/
