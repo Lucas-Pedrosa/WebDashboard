@@ -17,17 +17,6 @@ body {
     margin: 100px 0px;
 }
 
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgb(100, 100, 100);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
 .grafico{
     width: fit-content;
     display: flex;
