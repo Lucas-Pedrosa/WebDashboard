@@ -7,6 +7,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 .outer-container {
     display: flex;
     height: 720px;
