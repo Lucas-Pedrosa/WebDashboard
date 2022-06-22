@@ -86,12 +86,12 @@ form .details-box .input-box {
     border-color: #000
 }
 
-form .button {
+.button {
     height: 45px;
     margin: 45px 0;
 }
 
-form .button input {
+.button button {
     height: 100%;
     width: 100%;
     outline: none;
@@ -105,7 +105,7 @@ form .button input {
     transition: all 0.3s ease;
 }
 
-form .button input:hover {
+.button button:hover {
     background: #5c5c5c;
     transition: all 0.3s ease;
 }
@@ -118,6 +118,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
 }
 
 footer a {
