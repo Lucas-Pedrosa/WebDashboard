@@ -13,17 +13,17 @@
 <h3 align="center">
   Tela principal do Dashboard:
 </h3>
-<img src="https://raw.githubusercontent.com/Lucas-Pedrosa/WebDashboard/main/img/tela1.PNG" align="center" />
+<img src="https://github.com/Lucas-Pedrosa/WebDashboard/blob/main/img/tela1.png" align="center" />
 
 <h3 align="center">
   Tela do Fale Conosco:
 </h3>
-<img src="https://raw.githubusercontent.com/Lucas-Pedrosa/WebDashboard/main/img/tela3.PNG" align="center" />
+<img src="https://github.com/Lucas-Pedrosa/WebDashboard/blob/main/img/tela2.png" align="center" />
 
 <h3 align="center">
   Tela do Quem Somos:
 </h3>
-<img src="https://raw.githubusercontent.com/Lucas-Pedrosa/WebDashboard/main/img/tela2.PNG" align="center" />
+<img src="https://github.com/Lucas-Pedrosa/WebDashboard/blob/main/img/tela3.png" align="center" />
 
 <div align="center" margin-bottom="30">
     <h3>Integrantes: </h3> 
