@@ -23,8 +23,20 @@ async function inserirDados(){
        mensagem: mensagem.value
   }).then(()=>{
        console.log("incluído com sucesso");
+       alert('Incluído com Sucesso.');
+
+       email.value = "";
+       nome.value = "";
+       telefone.value = "";
+       mensagem.value = "";
   })
   .catch((error)=>{
        console.log("erro de inclusão");
+       alert('Erro na Inclusão.');
+
+       email.value = "";
+       nome.value = "";
+       telefone.value = "";
+       mensagem.value = "";
   })
 }

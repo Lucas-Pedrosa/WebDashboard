@@ -42,8 +42,10 @@ function atualizarDados() {
 
 }).then(()=>{
     console.log("atualizado com sucesso");
+    alert("Atualizado com Sucesso.");
 })
 .catch((error)=>{
     console.log("erro de inclusão");
+    alert("Erro na Atualização");
 })
 }
