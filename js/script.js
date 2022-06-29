@@ -1,369 +1,418 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+import { getDatabase, ref, get, set, child, push, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
 
 
+const firebaseConfig = {
+  apiKey: "AIzaSyAczfyXu-N3s0MeatvLo1RfCXpR0L0FGg0",
+  authDomain: "liber-24ce7.firebaseapp.com",
+  databaseURL: "https://liber-24ce7-default-rtdb.firebaseio.com",
+  projectId: "liber-24ce7",
+  storageBucket: "liber-24ce7.appspot.com",
+  messagingSenderId: "16217782629",
+  appId: "1:16217782629:web:6a4a155abc19c92e10c98c"
+};
 
+const app= initializeApp(firebaseConfig);
 
-/*GRAPH 1*/
+geraPrimeiroGrafico();
 
-Highcharts.chart('container', {
-    chart: {
-        type: 'pie',
-        options3d: {
-            enabled: true,
-            alpha: 45,
-            beta: 0
-        }
-    },
-    title: {
-        text: 'Gêneros mais recomendadas'
-    },
-    accessibility: {
-        point: {
-            valueSuffix: '%'
-        }
-    },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            depth: 35,
-            dataLabels: {
+function GenerosMaisRecomendados(acao, investigacao, policial, romance, terror) {
+    this.acao = acao;
+    this.investigacao = investigacao;
+    this.policial = policial;
+    this.romance = romance;
+    this.terror = terror;
+}
+
+function LivrosMaisVendidos(donQuixote, umContoDeDuasCidades, oSenhorDosAneis, oPequenoPrincipe, harryPotter, oHobbit) {
+    this.donQuixote = donQuixote;
+    this.umContoDeDuasCidades = umContoDeDuasCidades;
+    this.oSenhorDosAneis = oSenhorDosAneis;
+    this.oPequenoPrincipe = oPequenoPrincipe;
+    this.harryPotter = harryPotter;
+    this.oHobbit = oHobbit;
+}
+
+/*-------- funções -----------*/
+
+function geraPrimeiroGrafico(){
+
+    const grafico = new GenerosMaisRecomendados();
+
+    const db = getDatabase();
+    const starCountRef = ref(db, 'GenerosMaisRecomendados');
+    onValue(starCountRef, (snapshot) => {
+
+        grafico.acao = snapshot.val().acao;
+        grafico.investigacao = snapshot.val().investigacao;
+        grafico.policial = snapshot.val().policial;
+        grafico.romance = snapshot.val().romance;
+        grafico.terror = snapshot.val().terror;
+
+        carregaGenerosMaisRecomendados(grafico);
+        carregaGenerosMaisRecomendadosTabela(grafico);
+
+    });
+}
+
+function carregaGenerosMaisRecomendados(grafico){
+
+    /*GRAPH 1*/
+
+    Highcharts.chart('container', {
+        chart: {
+            type: 'pie',
+            options3d: {
                 enabled: true,
-                format: '{point.name}'
+                alpha: 45,
+                beta: 0
             }
-        }
-    },
-    series: [{
-        type: 'pie',
-        name: 'Browser share',
-        data: [
-            ['ação', 45.0],
-            ['terror', 26.8],
-            {
-                name: 'aventura',
-                y: 12.8,
-                sliced: true,
-                selected: true
-            },
-            ['romance', 8.5],
-            ['policial', 6.2],
-            ['investigação', 0.7]
-        ]
-    }]
-});
-
-
-/*GRAPH 2*/
-
-// Create the chart
-Highcharts.chart('container2', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Gêneros mais recomendadas'
-    },
-    subtitle: {
-        text: ''
-    },
-    accessibility: {
-        announceNewData: {
-            enabled: true
-        }
-    },
-    xAxis: {
-        type: 'category'
-    },
-    yAxis: {
+        },
         title: {
-            text: 'Total percent market share'
-        }
-
-    },
-    legend: {
-        enabled: false
-    },
-    plotOptions: {
-        series: {
-            borderWidth: 0,
-            dataLabels: {
-                enabled: true,
-                format: '{point.y:.1f}%'
+            text: 'Gêneros mais recomendadas'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
             }
-        }
-    },
-
-    tooltip: {
-        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-    },
-
-    series: [
-        {
-            name: "Browsers",
-            colorByPoint: true,
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
             data: [
+                ['ação', grafico.acao],
+                ['terror', grafico.terror],
+                ['romance', grafico.romance],
+                ['policial', grafico.policial],
+                ['investigação', grafico.investigacao]
+            ]
+        }]
+    });
+}
+
+
+function carregaGenerosMaisRecomendadosTabela(grafico){
+
+    /*GRAPH 2*/
+
+    // Create the chart
+    Highcharts.chart('container2', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Gêneros mais recomendadas'
+        },
+        subtitle: {
+            text: ''
+        },
+        accessibility: {
+            announceNewData: {
+                enabled: true
+            }
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Total percent market share'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y:.1f}%'
+                }
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+        },
+
+        series: [
+            {
+                name: "Browsers",
+                colorByPoint: true,
+                data: [
+                    {
+                        name: "ação",
+                        y: grafico.acao,
+                        drilldown: "ação"
+                    },
+                    {
+                        name: "terror",
+                        y: grafico.terror,
+                        drilldown: "terror"
+                    },
+                    {
+                        name: "romance",
+                        y: grafico.romance,
+                        drilldown: "romance"
+                    },
+                    {
+                        name: "policial",
+                        y: grafico.policial,
+                        drilldown: "policial"
+                    },
+                    {
+                        name: "investigação",
+                        y: grafico.investigacao,
+                        drilldown: "investigação"
+                    }
+                ]
+            }
+        ],
+        drilldown: {
+            breadcrumbs: {
+                position: {
+                    align: 'right'
+                }
+            },
+            series: [
                 {
-                    name: "ação",
-                    y: 45.0,
-                    drilldown: "ação"
+                    name: "Chrome",
+                    id: "Chrome",
+                    data: [
+                        [
+                            "v65.0",
+                            0.1
+                        ],
+                        [
+                            "v64.0",
+                            1.3
+                        ],
+                        [
+                            "v63.0",
+                            53.02
+                        ],
+                        [
+                            "v62.0",
+                            1.4
+                        ],
+                        [
+                            "v61.0",
+                            0.88
+                        ],
+                        [
+                            "v60.0",
+                            0.56
+                        ],
+                        [
+                            "v59.0",
+                            0.45
+                        ],
+                        [
+                            "v58.0",
+                            0.49
+                        ],
+                        [
+                            "v57.0",
+                            0.32
+                        ],
+                        [
+                            "v56.0",
+                            0.29
+                        ],
+                        [
+                            "v55.0",
+                            0.79
+                        ],
+                        [
+                            "v54.0",
+                            0.18
+                        ],
+                        [
+                            "v51.0",
+                            0.13
+                        ],
+                        [
+                            "v49.0",
+                            2.16
+                        ],
+                        [
+                            "v48.0",
+                            0.13
+                        ],
+                        [
+                            "v47.0",
+                            0.11
+                        ],
+                        [
+                            "v43.0",
+                            0.17
+                        ],
+                        [
+                            "v29.0",
+                            0.26
+                        ]
+                    ]
                 },
                 {
-                    name: "terror",
-                    y: 26.8,
-                    drilldown: "terror"
+                    name: "Firefox",
+                    id: "Firefox",
+                    data: [
+                        [
+                            "v58.0",
+                            1.02
+                        ],
+                        [
+                            "v57.0",
+                            7.36
+                        ],
+                        [
+                            "v56.0",
+                            0.35
+                        ],
+                        [
+                            "v55.0",
+                            0.11
+                        ],
+                        [
+                            "v54.0",
+                            0.1
+                        ],
+                        [
+                            "v52.0",
+                            0.95
+                        ],
+                        [
+                            "v51.0",
+                            0.15
+                        ],
+                        [
+                            "v50.0",
+                            0.1
+                        ],
+                        [
+                            "v48.0",
+                            0.31
+                        ],
+                        [
+                            "v47.0",
+                            0.12
+                        ]
+                    ]
                 },
                 {
-                    name: "aventura",
-                    y: 12.8,
-                    drilldown: "aventura"
+                    name: "Internet Explorer",
+                    id: "Internet Explorer",
+                    data: [
+                        [
+                            "v11.0",
+                            6.2
+                        ],
+                        [
+                            "v10.0",
+                            0.29
+                        ],
+                        [
+                            "v9.0",
+                            0.27
+                        ],
+                        [
+                            "v8.0",
+                            0.47
+                        ]
+                    ]
                 },
                 {
-                    name: "romance",
-                    y: 8.5,
-                    drilldown: "romance"
+                    name: "Safari",
+                    id: "Safari",
+                    data: [
+                        [
+                            "v11.0",
+                            3.39
+                        ],
+                        [
+                            "v10.1",
+                            0.96
+                        ],
+                        [
+                            "v10.0",
+                            0.36
+                        ],
+                        [
+                            "v9.1",
+                            0.54
+                        ],
+                        [
+                            "v9.0",
+                            0.13
+                        ],
+                        [
+                            "v5.1",
+                            0.2
+                        ]
+                    ]
                 },
                 {
-                    name: "policial",
-                    y: 6.2,
-                    drilldown: "policial"
+                    name: "Edge",
+                    id: "Edge",
+                    data: [
+                        [
+                            "v16",
+                            2.6
+                        ],
+                        [
+                            "v15",
+                            0.92
+                        ],
+                        [
+                            "v14",
+                            0.4
+                        ],
+                        [
+                            "v13",
+                            0.1
+                        ]
+                    ]
                 },
                 {
-                    name: "investigação",
-                    y: 0.7,
-                    drilldown: "investigação"
+                    name: "Opera",
+                    id: "Opera",
+                    data: [
+                        [
+                            "v50.0",
+                            0.96
+                        ],
+                        [
+                            "v49.0",
+                            0.82
+                        ],
+                        [
+                            "v12.1",
+                            0.14
+                        ]
+                    ]
                 }
             ]
         }
-    ],
-    drilldown: {
-        breadcrumbs: {
-            position: {
-                align: 'right'
-            }
-        },
-        series: [
-            {
-                name: "Chrome",
-                id: "Chrome",
-                data: [
-                    [
-                        "v65.0",
-                        0.1
-                    ],
-                    [
-                        "v64.0",
-                        1.3
-                    ],
-                    [
-                        "v63.0",
-                        53.02
-                    ],
-                    [
-                        "v62.0",
-                        1.4
-                    ],
-                    [
-                        "v61.0",
-                        0.88
-                    ],
-                    [
-                        "v60.0",
-                        0.56
-                    ],
-                    [
-                        "v59.0",
-                        0.45
-                    ],
-                    [
-                        "v58.0",
-                        0.49
-                    ],
-                    [
-                        "v57.0",
-                        0.32
-                    ],
-                    [
-                        "v56.0",
-                        0.29
-                    ],
-                    [
-                        "v55.0",
-                        0.79
-                    ],
-                    [
-                        "v54.0",
-                        0.18
-                    ],
-                    [
-                        "v51.0",
-                        0.13
-                    ],
-                    [
-                        "v49.0",
-                        2.16
-                    ],
-                    [
-                        "v48.0",
-                        0.13
-                    ],
-                    [
-                        "v47.0",
-                        0.11
-                    ],
-                    [
-                        "v43.0",
-                        0.17
-                    ],
-                    [
-                        "v29.0",
-                        0.26
-                    ]
-                ]
-            },
-            {
-                name: "Firefox",
-                id: "Firefox",
-                data: [
-                    [
-                        "v58.0",
-                        1.02
-                    ],
-                    [
-                        "v57.0",
-                        7.36
-                    ],
-                    [
-                        "v56.0",
-                        0.35
-                    ],
-                    [
-                        "v55.0",
-                        0.11
-                    ],
-                    [
-                        "v54.0",
-                        0.1
-                    ],
-                    [
-                        "v52.0",
-                        0.95
-                    ],
-                    [
-                        "v51.0",
-                        0.15
-                    ],
-                    [
-                        "v50.0",
-                        0.1
-                    ],
-                    [
-                        "v48.0",
-                        0.31
-                    ],
-                    [
-                        "v47.0",
-                        0.12
-                    ]
-                ]
-            },
-            {
-                name: "Internet Explorer",
-                id: "Internet Explorer",
-                data: [
-                    [
-                        "v11.0",
-                        6.2
-                    ],
-                    [
-                        "v10.0",
-                        0.29
-                    ],
-                    [
-                        "v9.0",
-                        0.27
-                    ],
-                    [
-                        "v8.0",
-                        0.47
-                    ]
-                ]
-            },
-            {
-                name: "Safari",
-                id: "Safari",
-                data: [
-                    [
-                        "v11.0",
-                        3.39
-                    ],
-                    [
-                        "v10.1",
-                        0.96
-                    ],
-                    [
-                        "v10.0",
-                        0.36
-                    ],
-                    [
-                        "v9.1",
-                        0.54
-                    ],
-                    [
-                        "v9.0",
-                        0.13
-                    ],
-                    [
-                        "v5.1",
-                        0.2
-                    ]
-                ]
-            },
-            {
-                name: "Edge",
-                id: "Edge",
-                data: [
-                    [
-                        "v16",
-                        2.6
-                    ],
-                    [
-                        "v15",
-                        0.92
-                    ],
-                    [
-                        "v14",
-                        0.4
-                    ],
-                    [
-                        "v13",
-                        0.1
-                    ]
-                ]
-            },
-            {
-                name: "Opera",
-                id: "Opera",
-                data: [
-                    [
-                        "v50.0",
-                        0.96
-                    ],
-                    [
-                        "v49.0",
-                        0.82
-                    ],
-                    [
-                        "v12.1",
-                        0.14
-                    ]
-                ]
-            }
-        ]
-    }
-});
+    });
+
+}
 
 
 /*GRAPH 3*/
@@ -1398,66 +1447,6 @@ Highcharts.chart('container8', {
 });
 
 
-/* GRAPH 9 */
-
-Highcharts.chart('container9', {
-
-    title: {
-        text: 'Solar Employment Growth by Sector, 2010-2016'
-    },
-
-    subtitle: {
-        text: 'Source: thesolarfoundation.com'
-    },
-
-    yAxis: {
-        title: {
-            text: 'Number of Employees'
-        }
-    },
-
-    xAxis: {
-        accessibility: {
-            rangeDescription: 'Range: 2010 to 2017'
-        }
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
-            },
-            pointStart: 2010
-        }
-    },
-
-    series: [{
-        name: 'Installation',
-        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            }
-        }]
-    }
-
-});
 
 
 
@@ -1471,6 +1460,7 @@ var botao = document.querySelector(".botao");
 var playing = false;
 
 botao.addEventListener('click',function() {
+
   if(playing)
     return;
   
