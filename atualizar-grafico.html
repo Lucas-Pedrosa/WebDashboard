@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fale Conosco</title>
+    <title>Atualizar Gráfico</title>
     <link rel="stylesheet" href="./style/fale-conosco.css">
     <link rel="stylesheet" href="./style/header.css">
-    <script type="module" src="js/fale-conosco.js"></script>
+    <script type="module" src="js/firebase.js"></script>
 </head>
 <body>
     <header class="menu-header">
@@ -15,35 +15,39 @@
         <div class="header-right">
           <a href="./index.html">Home</a>
           <a href="./quem-somos.html">Quem Somos</a>
-          <a class="active" href="./fale-conosco.html">Fale Conosco</a>
+          <a href="./fale-conosco.html">Fale Conosco</a>
         </div>
     </header>
     <div class="outer-container">
         <div class="container">
-            <div class="title"><h1>Fale Conosco</h1></div>
+            <div class="title"><h1>Atualizar Gráfico</h1></div>
             <form>
                 <div class="details-box">
                     <div class="input-box">
-                        <label class="details">Nome Completo</label>
-                        <input id="nome" type="text" placeholder="Insira seu nome" required>
+                        <label class="details">Ação</label>
+                        <input id="acao" type="number" required>
                     </div>
                     <div class="input-box">
-                        <label class="details">Email</label>
-                        <input id="email" type="email" placeholder="Insira seu email" required>
+                        <label class="details">Investigação</label>
+                        <input id="investigacao" type="number" required>
                     </div>
                     <div class="input-box">
-                        <label class="details">Telefone</label>
-                        <input id="telefone" type="number" placeholder="Insira seu telefone" required>
+                        <label class="details">Policial</label>
+                        <input id="policial" type="number" required>
                     </div>
                     <div class="input-box">
-                        <label class="details">Mensagem</label>
-                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+                        <label class="details">Romance</label>
+                        <input id="romance" type="number" required>
+                    </div>
+                    <div class="input-box">
+                        <label class="details">Terror</label>
+                        <input id="terror" type="number" required>
                     </div>
                 </div>
                 
             </form>
             <div class="button">
-                <button class="button" id ="btnEnviar">Enviar</button>
+                <button class="button" id ="btnAtualizar">Atualizar</button>
             </div>
         </div>
     </div>
@@ -51,6 +55,8 @@
     <footer>
         <p>Liber&copy; Desenvolvido por Lucas e Giovanni | <a href="./quem-somos.html" target="_blank">Quem Somos</a></p>
     </footer>
+
+    <script type="module" src="./js/atualizar-grafico.js"></script>
     
 </body>
 </html>
